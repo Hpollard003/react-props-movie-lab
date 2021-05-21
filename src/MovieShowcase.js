@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { render } from 'react-dom';
 import MovieCard from './card-components/MovieCard.js'
 import movieData from './data.js'
 
@@ -6,7 +7,12 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return an array of the correct JSX
-  }
+    return movieData.map(movie => <MovieCard 
+      
+      title={movie.title} 
+      
+      />)
+}
 
   render() {
     return (
